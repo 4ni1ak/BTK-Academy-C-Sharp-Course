@@ -17,17 +17,18 @@ namespace _012._1_Interdaces
         {
         public void Add()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Oracle Added ");
+
 
         }
         public void Update()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Oracle Update "); ;
 
         }
         public void Delete()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Oracle Delete ");
 
         }
     }
@@ -40,13 +41,20 @@ namespace _012._1_Interdaces
         }
         public void Update()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Sql Update ");
 
         }
         public void Delete()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Sql Delete ");
 
+        }
+    }
+    class CustomerManager
+    {
+        public void Add(ICustomerDal customerDal)
+        {
+            customerDal.Add();
         }
     }
 

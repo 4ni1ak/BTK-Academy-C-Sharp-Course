@@ -10,8 +10,25 @@ namespace _012._1_Interdaces
     {
         static void Main(string[] args)
         {
-            //InterdacesIntro();
-            
+            //InterfacesIntro();
+            //InterfacesIntro_2();
+            ICustomerDal[] customerDals = new ICustomerDal[]
+            {
+                new SqlServerCustomerDal(),
+                new OracleServerCustomerDal()
+            };
+            foreach (var customerDal in customerDals)
+            {
+                customerDal.Add();
+            }
+
+        }
+
+        private static void InterfacesIntro_2()
+        {
+            CustomerManager customerManager = new CustomerManager(); ;
+            customerManager.Add(new SqlServerCustomerDal());
+            // customerManager.Add(new OracleServerCustomerDal()); ;
         }
 
         private static void InterdacesIntro()
