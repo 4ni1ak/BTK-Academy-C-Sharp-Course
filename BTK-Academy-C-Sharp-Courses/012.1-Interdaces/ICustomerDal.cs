@@ -35,7 +35,7 @@ namespace _012._1_Interdaces
     {
         public void Add()
         {
-            Console.WriteLine("Sql Added ")
+            Console.WriteLine("Sql Added ");
 
         }
         public void Update()
