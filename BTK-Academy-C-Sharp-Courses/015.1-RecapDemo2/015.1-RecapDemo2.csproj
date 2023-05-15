@@ -7,7 +7,7 @@
     <ProjectGuid>{A6BD651B-04A6-4E97-9AA2-A53034C6F1C8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_015._1_RecapDemo2</RootNamespace>
-    <AssemblyName>_015._1_RecapDemo2</AssemblyName>
+    <AssemblyName>015.1-RecapDemo2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
