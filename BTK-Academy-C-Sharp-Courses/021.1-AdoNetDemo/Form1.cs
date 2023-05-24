@@ -22,5 +22,15 @@ namespace _021._1_AdoNetDemo
             ProductDal productDal= new ProductDal();
             dgwProducts.DataSource= productDal.GetALL();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
