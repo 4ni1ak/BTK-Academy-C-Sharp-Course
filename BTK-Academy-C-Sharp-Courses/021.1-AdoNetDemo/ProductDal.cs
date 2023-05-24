@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,15 +11,12 @@ namespace _021._1_AdoNetDemo
 {
     internal class ProductDal
     {
+        SqlConnection _connection = new SqlConnection(@"server=(localdb)\MSSQLLocalDB;initial catalog=ETrade;integrated security=true;");//false;uid=Anil;password=12345"; 
         public List<Product> GetALL()
         {
-            SqlConnection connection =  new SqlConnection(@"server=(localdb)\MSSQLLocalDB;initial catalog=ETrade;integrated security=true;");//false;uid=Anil;password=12345"; 
-            if (connection.State == ConnectionState.Closed)
-            {
-                connection.Open();
-            }
-            SqlCommand command = new SqlCommand("Select * from Products",connection);
-            SqlDataReader reader = command.ExecuteReader();                     
+            ConnectionControl();
+            SqlCommand command = new SqlCommand("Select * from Products", _connection);
+            SqlDataReader reader = command.ExecuteReader();
             List<Product> products = new List<Product>();
 
             while (reader.Read())
@@ -32,27 +30,49 @@ namespace _021._1_AdoNetDemo
 
                 };
                 products.Add(product);
-                
+
             }
             reader.Close();
-            connection.Close();
+            _connection.Close();
             return products;
         }
+
+        private void ConnectionControl()
+        {
+            if (_connection.State == ConnectionState.Closed)
+            {
+                _connection.Open();
+            }
+        }
+
         public DataTable GetALL2()
         {
-            SqlConnection connection = new SqlConnection(@"server=(localdb)\MSSQLLocalDB;initial catalog=ETrade;integrated security=true;");//false;uid=Anil;password=12345"; 
-            if (connection.State == ConnectionState.Closed)
+            
+            if (_connection.State == ConnectionState.Closed)
             {
-                connection.Open();
+                _connection.Open();
             }
-            SqlCommand command = new SqlCommand("Select * from Products", connection);
+            SqlCommand command = new SqlCommand("Select * from Products", _connection);
             SqlDataReader reader = command.ExecuteReader();
             DataTable dataTable = new DataTable();
             dataTable.Load(reader);
             reader.Close();
-            connection.Close();
+            _connection.Close();
 
             return dataTable;
+        }
+        public void Add(Product product)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand("Insert into Products values(@name,@unitPrice,@stockAmount)", _connection);
+            command.Parameters.AddWithValue("@name",product.Name);
+            command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
+            command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
+            command.ExecuteNonQuery();
+
+            _connection.Close();
+
+
         }
     }
 }
