@@ -43,5 +43,39 @@ namespace _021._1_AdoNetDemo
             LoadProducts();
             MessageBox.Show("Product Added");
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+   
+        private void dgwProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Cell conntent");
+            tbxNameUpdate.Text = dgwProducts.CurrentRow.Cells[1].Value.ToString();
+            tbxUnitPriceUpdate.Text = dgwProducts.CurrentRow.Cells[2].Value.ToString();
+            tbxStockAmountUpdate.Text = dgwProducts.CurrentRow.Cells[3].Value.ToString();
+          
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Product product = new Product
+            {
+                Id = Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value),
+                Name = tbxNameUpdate.Text,
+                UnitPrice = Convert.ToDecimal(tbxUnitPriceUpdate),
+                StockAmount = Convert.ToInt32(tbxStockAmountUpdate)
+            };
+            _productDal.Update(product);
+            LoadProducts();
+            MessageBox.Show("Updated");
+        }
     }
 }
