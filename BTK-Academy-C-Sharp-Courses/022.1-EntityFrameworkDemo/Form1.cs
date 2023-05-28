@@ -50,8 +50,8 @@ namespace _022._1_EntityFrameworkDemo
             _productDal.Update(new Product { 
                 Id = Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value),
                 Name = tbxNameUpdate.Text,
-                UnitPrice = Convert.ToDecimal(tbxUnitPriceUpdate),
-                StockAmount = Convert.ToInt32(tbxStockAmountUpdate)
+                UnitPrice = Convert.ToDecimal(tbxUnitPriceUpdate.Text),
+                StockAmount = Convert.ToInt32(tbxStockAmountUpdate.Text)
             }) ;
             LoadProducts();
             MessageBox.Show("Updated");
