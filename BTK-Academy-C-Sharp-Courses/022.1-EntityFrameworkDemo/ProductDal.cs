@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -28,6 +29,18 @@ namespace _022._1_EntityFrameworkDemo
 
             }
         }
+
+        public List<Product> GetByCompany(string key)
+        {
+            using (ETradeContext context = new ETradeContext())
+            {
+                return context.Products.Where(p => p.Company.Contains(key)).ToList();
+
+            }
+        }
+      
+
+
         public List<Product> GetByUnitPrice(decimal price)
         {
             using (ETradeContext context = new ETradeContext())
@@ -48,11 +61,11 @@ namespace _022._1_EntityFrameworkDemo
         {
             using (ETradeContext context = new ETradeContext())
             {
-              var result =context.Products.FirstOrDefault(p => p.Id == id);
+                var result = context.Products.FirstOrDefault(p => p.Id == id);
                 return result;
             }
-
         }
+
         public void Add(Product product)
         {
             using (ETradeContext context = new ETradeContext())

@@ -10,6 +10,6 @@ namespace _022._1_EntityFrameworkDemo
     internal class ETradeContext:DbContext
     {
         public DbSet<Product> Products { get; set; }
-
+        
     }
 }
