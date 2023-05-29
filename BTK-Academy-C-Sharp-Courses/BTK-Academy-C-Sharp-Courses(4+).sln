@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "021.1-AdoNetDemo", "021.1-A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "022.1-EntityFrameworkDemo", "022.1-EntityFrameworkDemo\022.1-EntityFrameworkDemo.csproj", "{9DCF43F7-DF49-435E-89FE-DB7EDF06B4E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "024.1-Generics", "024.1-Generics\024.1-Generics.csproj", "{F36EE7DA-F0EC-4F7C-8557-ECF0F2B49711}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{9DCF43F7-DF49-435E-89FE-DB7EDF06B4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DCF43F7-DF49-435E-89FE-DB7EDF06B4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DCF43F7-DF49-435E-89FE-DB7EDF06B4E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36EE7DA-F0EC-4F7C-8557-ECF0F2B49711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36EE7DA-F0EC-4F7C-8557-ECF0F2B49711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36EE7DA-F0EC-4F7C-8557-ECF0F2B49711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36EE7DA-F0EC-4F7C-8557-ECF0F2B49711}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
