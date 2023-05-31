@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,16 +11,32 @@ namespace _024._1_Generics
     {
         static void Main(string[] args)
         {
-
+            Utilities utilities=new Utilities();
+            List<string>result = utilities.BuildList<string>("Ankara","İzmir","Adana");
+            foreach(string item in result) { 
+            Console.WriteLine(item);
+            }
+            Console.ReadLine();
+            List<Customer> return2 = utilities.BuildList<Customer>(new Customer { FirstName="Anil"},new Customer { FirstName="Diyar"});
+            foreach(var customer in return2) {
+                Console.WriteLine(customer.FirstName);
+            }
         }
-    }
 
-    class Product
+    }
+    class Utilities { 
+    public List<T> BuildList<T>(params T[] items)
+        {
+            return new List<T>(items);
+        }
+    
+    }
+    class Product: IEntity
     {
 
     }
 
-    interface IRepository<T>
+    interface IRepository<T>where T:class, IEntity, new()//struct only accept variable 
     {
         List<T> GetAll();
         T Get(int id);
@@ -30,9 +47,20 @@ namespace _024._1_Generics
 
     interface IProductDal : IRepository<Product>
     {
+        
+    }
+    interface IDtudentDal : IRepository<Customer>//<Student>//<string>now work!!
+    {
 
     }
+    interface IEntity
+    {
 
+    }
+    class Student:IEntity
+    {
+
+    }
     class ProductDal : IProductDal
     {
         public void Add(Product product)
@@ -61,9 +89,9 @@ namespace _024._1_Generics
         }
     }
 
-    class Customer
+    class Customer: IEntity
     {
-
+        public string FirstName { get; set; }
     }
 
     interface ICustomerDal : IRepository<Customer>
