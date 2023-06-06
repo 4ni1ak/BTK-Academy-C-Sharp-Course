@@ -11,6 +11,38 @@ namespace _020._1_Exceptions
         static void Main(string[] args)
         {
             //ExceptionIntro();
+            //TryCatch();
+            //ActionDemo();
+            Console.WriteLine(Sum(3, 8));
+            Func<int, int, int> add = Sum;
+            Console.WriteLine(add(3, 8));
+            Func<int> getRandomNumber = delegate ()
+            {
+                Random random = new Random();
+                return random.Next(1, 100);
+            };
+            Console.WriteLine(getRandomNumber());
+            Func<int> getRandomNumber2=()=>new Random().Next(1,25);
+            Console.WriteLine(getRandomNumber2());
+
+
+            Console.ReadLine();
+        }
+
+        private static void ActionDemo()
+        {
+            HandleException(() =>
+            {
+                Find();
+            });
+        }
+        static int Sum(int x, int y)
+        {
+            return x + y;
+        }
+
+        private static void TryCatch()
+        {
             try
             {
                 Find();
@@ -20,12 +52,8 @@ namespace _020._1_Exceptions
                 Console.WriteLine(exception.Message);
                 throw;
             }
-            HandleException(() =>
-            {
-                Find();
-            });
-
         }
+
         private static void HandleException(Action action) 
         {
             try
