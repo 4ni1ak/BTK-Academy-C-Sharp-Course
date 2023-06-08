@@ -39,14 +39,14 @@
             this.dgwProduct.Name = "dgwProduct";
             this.dgwProduct.RowHeadersWidth = 51;
             this.dgwProduct.RowTemplate.Height = 24;
-            this.dgwProduct.Size = new System.Drawing.Size(1136, 150);
+            this.dgwProduct.Size = new System.Drawing.Size(896, 150);
             this.dgwProduct.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 612);
+            this.ClientSize = new System.Drawing.Size(920, 612);
             this.Controls.Add(this.dgwProduct);
             this.Name = "Form1";
             this.Text = "Form1";
