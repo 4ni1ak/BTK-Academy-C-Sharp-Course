@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Northwind.DataAccess.Abstract
+namespace Northwind.DataAccess.Concrete.EntityFramework
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public class EfCategoryDal:EfEntityRepositoryBase<Category,NorthwindContext>
     {
-        
+
     }
 }
