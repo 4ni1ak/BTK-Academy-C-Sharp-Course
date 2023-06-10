@@ -166,6 +166,10 @@ namespace _022._1_EntityFrameworkDemo
         {
             SearchProducts(tbxSearch.Text);
         }
-        
+
+        private void dgwProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
