@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.04-FactoryMethod", "036
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.5-AbractFactoryDesign", "036.5-AbractFactoryDesign\036.5-AbractFactoryDesign.csproj", "{94A531FC-C522-4A38-8BDB-CB98C94EF5B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.6-Prototype", "036.6-Prototype\036.6-Prototype.csproj", "{13E0CBA5-362D-4D50-BB29-8540CE7F6330}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{94A531FC-C522-4A38-8BDB-CB98C94EF5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94A531FC-C522-4A38-8BDB-CB98C94EF5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94A531FC-C522-4A38-8BDB-CB98C94EF5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E0CBA5-362D-4D50-BB29-8540CE7F6330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E0CBA5-362D-4D50-BB29-8540CE7F6330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E0CBA5-362D-4D50-BB29-8540CE7F6330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E0CBA5-362D-4D50-BB29-8540CE7F6330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
