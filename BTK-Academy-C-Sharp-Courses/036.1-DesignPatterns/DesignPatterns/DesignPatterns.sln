@@ -7,15 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.01-SingletonDesign", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.04-FactoryMethod", "036.04-FactoryMethod\036.04-FactoryMethod.csproj", "{B82CE001-358A-4394-B273-5CD82D7C154C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.5-AbractFactoryDesign", "036.5-AbractFactoryDesign\036.5-AbractFactoryDesign.csproj", "{94A531FC-C522-4A38-8BDB-CB98C94EF5B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.05-AbractFactoryDesign", "036.5-AbractFactoryDesign\036.05-AbractFactoryDesign.csproj", "{94A531FC-C522-4A38-8BDB-CB98C94EF5B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.6-Prototype", "036.6-Prototype\036.6-Prototype.csproj", "{13E0CBA5-362D-4D50-BB29-8540CE7F6330}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.06-Prototype", "036.6-Prototype\036.06-Prototype.csproj", "{13E0CBA5-362D-4D50-BB29-8540CE7F6330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.7-Builder", "036.7-Builder\036.7-Builder.csproj", "{B02ECC38-9673-4849-8C38-F7282BE94684}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.07-Builder", "036.7-Builder\036.07-Builder.csproj", "{B02ECC38-9673-4849-8C38-F7282BE94684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.8-Facade", "036.8-Facade\036.8-Facade.csproj", "{D4001ED1-F326-4A82-93FF-7B0D63DAC46C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.08-Facade", "036.8-Facade\036.08-Facade.csproj", "{D4001ED1-F326-4A82-93FF-7B0D63DAC46C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.9-Adapter", "036.9-Adapter\036.9-Adapter.csproj", "{A9A568C9-D66C-4694-A29F-7D13C2CAC323}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.09-Adapter", "036.9-Adapter\036.09-Adapter.csproj", "{A9A568C9-D66C-4694-A29F-7D13C2CAC323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "036.10-Composite", "036.10-Composite\036.10-Composite.csproj", "{8357D056-8A75-4D8D-AB99-9294DBD776B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A9A568C9-D66C-4694-A29F-7D13C2CAC323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9A568C9-D66C-4694-A29F-7D13C2CAC323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9A568C9-D66C-4694-A29F-7D13C2CAC323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8357D056-8A75-4D8D-AB99-9294DBD776B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8357D056-8A75-4D8D-AB99-9294DBD776B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8357D056-8A75-4D8D-AB99-9294DBD776B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8357D056-8A75-4D8D-AB99-9294DBD776B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
